@@ -1,0 +1,5 @@
+preprocessing/raw_data/*
+!preprocessing/raw_data/.gitkeep
+preprocessing/raw_data/*.parquet
+
+*.parquet
