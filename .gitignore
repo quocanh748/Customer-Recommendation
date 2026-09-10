@@ -2,4 +2,9 @@ preprocessing/raw_data/*
 !preprocessing/raw_data/.gitkeep
 preprocessing/raw_data/*.parquet
 
+preprocessing/clean_data/*
+!preprocessing/clean_data/.gitkeep
+preprocessing/clean_data/*.parquet
+
+
 *.parquet
