@@ -19,7 +19,7 @@ Tập dữ liệu ghi nhận lịch sử giao dịch thực tế từ nền tả
 - `items`: Thông tin siêu dữ liệu của sản phẩm (ngành hàng, danh mục con, thương hiệu, giá bán).
 - `purchases`: Nhật ký giao dịch mua hàng (mã người dùng, mã sản phẩm, thời gian giao dịch, số lượng, tổng tiền).
 
-*(Lưu ý: Toàn bộ dữ liệu đã được ẩn danh hóa (anonymized) nhằm mục đích nghiên cứu và thử nghiệm mô hình. Liên kết tải dữ liệu được cung cấp khi có yêu cầu).*
+*(Lưu ý: Toàn bộ dữ liệu đã được ẩn danh hóa nhằm mục đích nghiên cứu và thử nghiệm mô hình. Liên kết tải dữ liệu được cung cấp khi có yêu cầu).*
 
 ## Kiến trúc & Quy trình Thực hiện
 
