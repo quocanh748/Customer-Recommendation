@@ -8,8 +8,8 @@ Hệ thống gợi ý và xếp hạng sản phẩm cá nhân hóa (Two-stage Re
 
 - **Dữ liệu**: 35.7M dòng giao dịch mua sắm (2.4M khách hàng, 20.8K sản phẩm).
 - **Công nghệ**: Python, Polars (LazyFrame/Streaming), XGBoost (GPU CUDA), Pandas, NumPy.
-- **Mô hình**: XGBoost Classifier / Pairwise Ranking kết hợp Hybrid Fallback xử lý Cold-Start.
-- **Mục tiêu**: Dự đoán xác suất mua hàng $P(\text{buy} = 1 \mid \text{User}, \text{Item})$ và xuất Top 10 sản phẩm tối ưu cho từng khách hàng.
+- **Mô hình**: XGBoost Classifier kết hợp Hybrid Fallback xử lý Cold-Start.
+- **Mục tiêu**: Dự đoán xác suất mua hàng và xuất Top 10 sản phẩm tối ưu cho từng khách hàng.
 
 ---
 
@@ -23,8 +23,8 @@ flowchart LR
     D --> E["4. Out-of-Time Test\n(Jan 2025 Groundtruth)"]
 ```
 
-1. **Tiền xử lý (Preprocessing)**: Làm sạch dữ liệu 3 bảng `items`, `users`, `purchases` bằng Polars, loại bỏ cột dư thừa, chuẩn hóa địa chỉ 63 tỉnh thành.
-2. **Kỹ nghệ đặc trưng (Feature Engineering)**:
+1. **Preprocessing**: Làm sạch dữ liệu 3 bảng `items`, `users`, `purchases` bằng Polars, loại bỏ cột dư thừa, chuẩn hóa địa chỉ 63 tỉnh thành.
+2. **Feature Engineering**:
    - **User Features**: RFM (Recency, Frequency, Monetary), tuổi tài khoản, tỷ lệ săn sale, giá mua trung bình.
    - **Item Features**: Doanh số lịch sử, số người từng mua, ngành hàng L1/L2, thương hiệu, mức giá.
    - **Cross & Affinity Features**: Lịch sử mua lặp lại, mức độ tương hợp giá cả, sở thích thương hiệu/ngành hàng.
@@ -32,7 +32,7 @@ flowchart LR
 3. **Chiến lược huấn luyện**:
    - Time-based Split: 10 tháng đầu năm 2024 làm quá khứ, 2 tháng cuối năm 2024 làm nhãn.
    - Negative Sampling: Tỷ lệ 1 Dương : 2 Âm (~15.1 triệu dòng train).
-4. **Xử lý Cold-Start (Khách mới)**:
+4. **Xử lý Cold-Start**:
    - Tự động nhận diện 160K khách hàng mới (chưa có lịch sử) và gợi ý theo Top sản phẩm bán chạy nhất tại chính Tỉnh/Thành của họ (Location-based Trending).
 
 ---
