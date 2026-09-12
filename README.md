@@ -33,7 +33,7 @@ flowchart LR
    - Time-based Split: 10 tháng đầu năm 2024 làm quá khứ, 2 tháng cuối năm 2024 làm nhãn.
    - Negative Sampling: Tỷ lệ 1 Dương : 2 Âm (~15.1 triệu dòng train).
 4. **Xử lý Cold-Start**:
-   - Tự động nhận diện 160K khách hàng mới (chưa có lịch sử) và gợi ý theo Top sản phẩm bán chạy nhất tại chính Tỉnh/Thành của họ (Location-based Trending).
+   - Tự động nhận diện 160K khách hàng mới (chưa có lịch sử giao dịch trước đây) và gợi ý theo Top sản phẩm bán chạy nhất tại chính Tỉnh/Thành của họ
 
 ---
 
