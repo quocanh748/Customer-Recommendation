@@ -12,12 +12,15 @@ Hệ thống gợi ý và xếp hạng sản phẩm cho chuỗi bán lẻ Mẹ &
 - **Mục tiêu**: Dự đoán xác suất mua hàng và xuất Top 10 sản phẩm tối ưu cho từng khách hàng.
 
 ---
-## Dataset Overview
-The dataset contains transaction history from an e-commerce platform with over 35.7M transactions:
-- `users`: User demographic features (gender, age group, province).
-- `items`: Item metadata (category, subcategory, brand, price).
-- `purchases`: Transaction logs (user_id, item_id, timestamp, quantity, amount).
-*(Note: Data is anonymized for benchmark and research purposes. Download link available upon request
+## Tổng quan Dữ liệu (Dataset Overview)
+
+Tập dữ liệu ghi nhận lịch sử giao dịch thực tế từ nền tảng thương mại điện tử với hơn 35.7 triệu giao dịch:
+- `users`: Thông tin nhân khẩu học của người dùng (giới tính, nhóm độ tuổi, tỉnh/thành phố).
+- `items`: Thông tin siêu dữ liệu của sản phẩm (ngành hàng, danh mục con, thương hiệu, giá bán).
+- `purchases`: Nhật ký giao dịch mua hàng (mã người dùng, mã sản phẩm, thời gian giao dịch, số lượng, tổng tiền).
+
+*(Lưu ý: Toàn bộ dữ liệu đã được ẩn danh hóa (anonymized) nhằm mục đích nghiên cứu và thử nghiệm mô hình. Liên kết tải dữ liệu được cung cấp khi có yêu cầu).*
+
 ## Kiến trúc & Quy trình Thực hiện
 
 ```mermaid
