@@ -1,10 +1,10 @@
-# Personalized E-Commerce Recommendation System
+# E-Commerce Recommendation System
 
 Hệ thống gợi ý và xếp hạng sản phẩm cho chuỗi bán lẻ Mẹ & Bé, huấn luyện trên 35.7 triệu giao dịch thực tế năm 2024 và kiểm thử mù trên Tháng 01/2025.
 
 ---
 
-## 📌 Tổng quan Dự án
+## Tổng quan Dự án
 
 - **Dữ liệu**: 35.7M dòng giao dịch mua sắm gồm 2.4M khách hàng và 20.8K sản phẩm.
 - **Công nghệ**: Python, Polars, XGBoost, Pandas, NumPy.
@@ -12,11 +12,11 @@ Hệ thống gợi ý và xếp hạng sản phẩm cho chuỗi bán lẻ Mẹ &
 - **Mục tiêu**: Dự đoán xác suất mua hàng và xuất Top 10 sản phẩm tối ưu cho từng khách hàng.
 
 ---
-## Tổng quan Dữ liệu (Dataset Overview)
+## Tổng quan Dữ liệu
 
 Tập dữ liệu ghi nhận lịch sử giao dịch thực tế từ nền tảng thương mại điện tử với hơn 35.7 triệu giao dịch:
 - `users`: Thông tin nhân khẩu học của người dùng (giới tính, nhóm độ tuổi, tỉnh/thành phố).
-- `items`: Thông tin siêu dữ liệu của sản phẩm (ngành hàng, danh mục con, thương hiệu, giá bán).
+- `items`: Thông tin của sản phẩm (ngành hàng, danh mục con, thương hiệu, giá bán).
 - `purchases`: Nhật ký giao dịch mua hàng (mã người dùng, mã sản phẩm, thời gian giao dịch, số lượng, tổng tiền).
 
 *(Lưu ý: Toàn bộ dữ liệu đã được ẩn danh hóa nhằm mục đích nghiên cứu và thử nghiệm mô hình. Liên kết tải dữ liệu được cung cấp khi có yêu cầu).*
