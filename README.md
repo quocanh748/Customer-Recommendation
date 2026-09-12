@@ -13,7 +13,7 @@ Hệ thống gợi ý và xếp hạng sản phẩm cá nhân hóa (Two-stage Re
 
 ---
 
-## 🏗️ Kiến trúc & Quy trình Thực hiện
+## Kiến trúc & Quy trình Thực hiện
 
 ```mermaid
 flowchart LR
@@ -37,17 +37,15 @@ flowchart LR
 
 ---
 
-## 🎯 Kết quả Đánh giá trên Groundtruth (Tháng 01/2025)
+## Kết quả Đánh giá trên Groundtruth (Tháng 01/2025)
 
 Đánh giá thực tế trên 644,970 khách hàng phát sinh đơn hàng trong Tháng 01/2025:
 
-| Nhóm khách hàng | Chiến lược gợi ý | HitRate@10 | Precision@10 | NDCG@10 |
-| :--- | :--- | :---: | :---: | :---: |
-| **Khách quen (Warm Users)** | XGBoost Ranking Model | **50.1%** | **8.8%** | **0.254** |
-| **Khách mới (Cold-Start)** | Location-based Trending (Tỉnh/Thành) | **11.4%** | **1.4%** | **0.031** |
-| **Toàn bộ hệ thống (Full)** | **Hybrid System** | **40.2%** | **6.2%** | **0.185** |
-
-> 🚀 **Hiệu quả**: Hệ thống cải thiện tỷ lệ tiếp cận khách hàng (HitRate@10) **gấp +206%** so với thuật toán cơ sở Popularity Baseline.
+| Nhóm khách hàng | HitRate@10 | Precision@10 | NDCG@10 |
+| :--- | :---: | :---: | :---: |
+| **Khách quen (Warm Users)** | **50.1%** | **8.8%** | **0.254** |
+| **Khách mới (Cold-Start)** | **11.4%** | **1.4%** | **0.031** |
+| **Toàn bộ hệ thống (Full)** | **40.2%** | **6.2%** | **0.185** |
 
 ---
 
@@ -66,4 +64,3 @@ flowchart LR
 │       └── xgboost_ranking.json    # File mô hình XGBoost đã train
 ├── feature_engineering.ipynb       # Tạo 35+ đặc trưng và tập train
 └── README.md
-```\n
