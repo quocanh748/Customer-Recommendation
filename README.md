@@ -1,13 +1,13 @@
 # Personalized E-Commerce Recommendation System
 
-Hệ thống gợi ý và xếp hạng sản phẩm cá nhân hóa (Two-stage Recommendation System) cho chuỗi bán lẻ Mẹ & Bé, huấn luyện trên 35.7 triệu giao dịch thực tế năm 2024 và kiểm thử mù trên Tháng 01/2025.
+Hệ thống gợi ý và xếp hạng sản phẩm cho chuỗi bán lẻ Mẹ & Bé, huấn luyện trên 35.7 triệu giao dịch thực tế năm 2024 và kiểm thử mù trên Tháng 01/2025.
 
 ---
 
 ## 📌 Tổng quan Dự án
 
-- **Dữ liệu**: 35.7M dòng giao dịch mua sắm (2.4M khách hàng, 20.8K sản phẩm).
-- **Công nghệ**: Python, Polars (LazyFrame/Streaming), XGBoost (GPU CUDA), Pandas, NumPy.
+- **Dữ liệu**: 35.7M dòng giao dịch mua sắm gồm 2.4M khách hàng và 20.8K sản phẩm.
+- **Công nghệ**: Python, Polars, XGBoost, Pandas, NumPy.
 - **Mô hình**: XGBoost Classifier kết hợp Hybrid Fallback xử lý Cold-Start.
 - **Mục tiêu**: Dự đoán xác suất mua hàng và xuất Top 10 sản phẩm tối ưu cho từng khách hàng.
 
